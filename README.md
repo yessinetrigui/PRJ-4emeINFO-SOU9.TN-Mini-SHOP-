@@ -19,8 +19,4 @@
 ![alt text](https://yessinetrigui.tn/stock/sou9TN/pic18.png)
 ![alt text](https://yessinetrigui.tn/stock/sou9TN/pic19.png)
 ![alt text](https://yessinetrigui.tn/stock/sou9TN/pic20.png)
-![alt text](https://yessinetrigui.tn/stock/sou9TN/pic21.png)
-![alt text](https://yessinetrigui.tn/stock/sou9TN/pic22.png)
-![alt text](https://yessinetrigui.tn/stock/sou9TN/pic23.png)
-![alt text](https://yessinetrigui.tn/stock/sou9TN/pic24.png)
-![alt text](https://yessinetrigui.tn/stock/sou9TN/pic25.png)
+
