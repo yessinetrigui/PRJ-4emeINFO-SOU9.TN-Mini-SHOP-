@@ -1,0 +1,252 @@
+* {
+    color: rgb(255, 255, 255);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+.actv{
+    font-weight: bolder !important;
+}
+ #HBM{
+     display: none;
+     width: 35%;
+ }
+#V-hiden{
+    display: block;
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    left: 0;
+    display: none;
+}
+#V-nav{
+    display: block;
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    background-color: rgb(33, 32, 32);
+    right: 0;
+    padding-top: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    z-index: 8;
+}
+#V-nav h1{
+    margin: 8% 0vw; 
+    text-align: center;
+}
+#V-nav #cont{
+    padding-top: 10%;
+    width: 98%;
+}
+#V-nav li{
+    width:100%;
+    margin: 30% 0;
+    display: flex;
+    padding-top: 4%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5% 0vw; 
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 33px;
+    /* identical to box height */
+    text-align: center;
+
+    color: #FFFFFF;
+}
+#V-nav  li a{
+    display: flex;
+    align-items: center;
+    margin: 0px 2px; 
+    width:100%;
+    justify-content: initial;
+}
+#V-nav  li a img{margin: 0px 8%;}
+body{
+    /*cursor: url("../src/cursor.png"), auto;*/
+}
+header, main, footer{
+    background-color: #020202;
+    width: 100%;
+    height: 100%;
+}
+main, footer{
+    height: fit-content;
+   
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 0.5% 0%;
+    background-color: #022A30;
+}
+header #logo{
+    width: auto;
+    height: 6%;
+    display: flex;
+    justify-content: flex-start;
+}
+header div img{
+    width: 100%;
+    height: 100%;
+}
+header nav{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 1.1vw; 
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 33px;
+    /* identical to box height */
+    text-align: center;
+
+    color: #FFFFFF;
+}
+header nav ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btn{
+    width:40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#btn select,a.bt{
+    border-radius: 30px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding: 1% 3%;
+    border-color: transparent;
+    background: transparent;
+    background: #6AC433;
+    border-radius: 15px;
+    transition-duration: 1s;
+    cursor: pointer;
+    width: fit-content;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#btn select img{
+    width: 15%;
+}
+#btn a:hover{
+    background: #6AC433;
+    background: linear-gradient(92.29deg, #6AC433 4.62%, rgba(255, 255, 255, 0.26) 52.14%, rgba(118, 186, 75, 0.869375) 95.86%);
+    border-radius: 15px;
+    transition-duration: 1s;
+}
+
+@media screen and (max-width: 900px) and (min-width: 500px){
+    #HBM{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header #btn{
+        display: none;
+    }
+    #btn{
+        width: 80%;
+        margin: auto;
+        width: 100%;
+        margin: auto;
+        background: #CE113F;
+        padding: 2%;
+    }
+    #btn a{
+        width: 100%;
+        margin: auto;
+        background: #CE113F;
+        border-radius: 12px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        color: #FFFFFF;
+        padding: 5%;
+    }
+    #btn a:hover{
+        background: transparent;
+    }
+    header div {
+        width: 30%;
+    }
+    header nav{
+        display: none;
+        visibility: hidden;
+    }
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img{
+        width: auto;
+       /* height: 100%;*/
+    }
+}
+
+
+@media screen and (max-width: 500px) and (min-width: 300px){
+    #HBM{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header #btn{
+        display: none;
+    }
+    header nav{
+        display: none;
+        visibility: hidden;
+    }
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header div{
+        width: 40%;
+        margin: auto;
+    }
+    img{
+        width: auto;
+        /*height: 100%;*/
+    }
+    #btn a:hover{
+        background: transparent;
+    }
+}

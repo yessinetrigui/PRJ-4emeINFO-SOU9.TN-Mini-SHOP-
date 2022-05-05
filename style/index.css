@@ -1,0 +1,310 @@
+/*font-family: 'Bebas Neue', cursive;
+font-family: 'Inconsolata', monospace;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Roboto', sans-serif;*/
+* {
+    color: rgb(255, 255, 255);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+/*
+main{
+   /* padding-bottom: 8vh;
+}*/
+.BLC-1{
+    width: 100%;
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../src/bg-blc-1.png");
+}
+.BLC-1 .sub-blc2{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BLC-1 .sub-blc1{
+    width: 85%;
+    margin: auto;
+    height: 90%;
+    display: grid; 
+    grid-auto-flow: row dense; 
+    grid-template-columns: 50% 40%; 
+    grid-template-rows: 1fr ; 
+    gap: 0px 2%; 
+    grid-template-areas: 
+      "desc pic"; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.BLC-1 .sub-blc1 .desc { 
+    grid-area: desc;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.BLC-1 .sub-blc1 .desc #area{
+    width: 90%;
+}
+.BLC-1 .sub-blc1 .desc h1{
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 140%;
+    text-align: start;
+    color: #FFFFFF;
+    
+}
+.BLC-1 .sub-blc1 .desc #area p #deco{
+    padding-bottom: 2vw;
+}
+.BLC-1 .sub-blc1 .desc p #deco svg{
+    width: 120%;
+    height: 120%;
+}
+.BLC-1 .sub-blc1 .desc h3{
+margin-top: 1.8vw;
+font-family: 'open sans';
+font-style: normal;
+font-weight: 320;
+font-size: 27px;
+color: #FFFFFF;
+}
+.BLC-1 .sub-blc1 .desc button{
+    margin-top: 5%;
+    border-radius: 30px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    color: #FFFFFF;
+    padding: 1% 8%;
+    border-color: transparent;
+    background: transparent;
+    background: #6AC433;
+    border-radius: 31px;
+    transition-duration: 1s;
+    cursor: pointer;
+
+}
+.BLC-1 .sub-blc1 .desc button:hover{
+    background: #6AC433;
+    background: linear-gradient(92.29deg, #6AC433 4.62%, rgba(255, 255, 255, 0.26) 52.14%, rgba(118, 186, 75, 0.869375) 95.86%);
+    border-radius: 15px;
+    transition-duration: 1s;
+    
+}
+.BLC-1 .sub-blc1 .pic { 
+    grid-area: pic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.BLC-1 .sub-blc1 .Hsh {
+    grid-area: Hsh;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    display: flex;
+    justify-content: start;
+    transform: rotateY(180deg);
+    transform: rotateZ(180deg);
+
+}
+.BLC-1 .sub-blc1 .sm { 
+    grid-area: sm;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: flex-end;
+    transform: rotateY(180deg);
+    transform: rotateZ(180deg);
+    height: 90%;
+    
+}
+.BLC-1 .sub-blc1 .sm a{
+    font-family: 'open sans';
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 0.7;
+    padding: 2% 0%;
+
+}
+
+
+@media screen and (max-width: 1200px) and (min-width: 900px){
+    .BLC-1 .sub-blc1 .desc h1 {
+        font-size: 30px;
+    }
+    .BLC-1 .sub-blc1 .desc p {
+        font-size: 20px;
+    }
+    .BLC-1 .sub-blc1 .pic img{
+        width: 100%;
+    }
+    
+    .BLC-1 .sub-blc1 .desc svg{
+        width: 101%;
+    }
+}
+@media screen and (max-width: 900px) and (min-width: 500px){
+    
+    img{
+        width: auto;
+       /* height: 100%;*/
+    }
+    .BLC-1 img{
+        width: auto;
+        height: 100%;
+    }
+    .BLC-1 {
+        padding-bottom: 25%;
+    height: auto;
+}
+.BLC-1 .sub-blc1 .pic {
+    height: 80%;
+}
+    .BLC-1 .sub-blc1 {
+        grid-template-columns:0.2fr 6fr 0.5fr;
+        grid-template-rows: 3fr 3fr;
+        gap: 17px 0px;
+        grid-template-areas:
+            "Hsh pic sm"
+            "Hsh desc sm";
+        justify-content: center;
+        align-items: center;
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+    .BLC-1 .sub-blc1 .desc #deco {
+        margin-top: 8%;
+    }
+    .BLC-1 .sub-blc1 .desc #area {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .BLC-1 .sub-blc1 .desc #area h1 {
+        text-align: center;
+        font-size: 35px;
+    }
+    .BLC-1 .sub-blc1 .desc p {
+        text-align: center;
+        font-size: 23px;
+        width: 80%;
+
+    }
+}
+@media screen and (max-width: 500px) and (min-width: 300px){
+    .BLC-4 .Title{
+        font-family: "Montserrat";
+        font-weight: 900;
+        font-size: 60px;
+        text-align: center;
+    
+        font-style: normal;
+        font-weight: 400;
+        font-size: 50px;
+        letter-spacing: normal;
+    }
+    
+    .BLC-3 .prj .P1 #link{
+        margin-top: 4%;
+    }
+    .BLC-1 img{
+        width: auto;
+        height: 100%;
+    }
+    .BLC-1 {
+        padding-bottom: 25%;
+        height: fit-content;}
+    .BLC-1 .sub-blc1 {
+        grid-template-columns:6fr;
+        grid-template-rows: 50% 50%;
+        gap: 1px 0px;
+        grid-template-areas:
+            " pic"
+            " desc";
+        justify-content: center;
+        align-items: center;
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+    .BLC-1 .sub-blc1 .sm{
+        /*display: none;*/
+        transform: rotateZ(-90deg);
+        writing-mode: unset;
+        transform: rotateY(0);
+        transform: rotateZ(0);
+    }
+    .BLC-1 .sub-blc1 .sm a{
+        font-size: 18px;
+        display: block;
+    }
+
+    .BLC-1 .sub-blc1 .desc #deco {
+        margin-top: 8%;
+        width: 30%;
+        visibility: hidden;
+        display: none;
+    }
+    .BLC-1 .sub-blc1 .desc #area {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .BLC-1 .sub-blc1 .desc #area h1 {
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .BLC-1 .sub-blc1 .desc h3{
+        font-size: 26px;
+        }
+    .BLC-1 .sub-blc1 .desc button{
+            width: 80%;
+    }
+    
+}
+#UnSupported{
+    visibility: hidden;
+    color: red;
+    font-weight: bold;
+    display: none;
+    font-size: 40px;
+    margin: auto;
+}
+@media screen and (max-width: 300px) and (min-width: 0px){
+    header,main,footer{
+        display: none;
+        visibility: hidden;
+    }
+    #UnSupported{
+        visibility: visible;
+    }
+}

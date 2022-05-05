@@ -1,0 +1,463 @@
+
+#D {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    height: 95vh;
+    display: grid; 
+    grid-auto-flow: row dense; 
+    grid-template-columns:  70% 29.550%; 
+    grid-template-rows: 100% ; 
+    gap: 0px 0%; 
+    grid-template-areas: 
+      "M C"; 
+    justify-content: space-between;
+    align-items: center;
+}
+#D .M{
+    grid-area: M;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    background-image: url('../src/dashboard/m-bg.png');
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+#D .M .Cadre{
+    width: 85%;
+    height: 30%;
+    display: grid; 
+    grid-auto-flow: row dense; 
+    grid-template-columns:  100%; 
+    grid-template-rows: 15% 85% ; 
+    gap: 0px 0%; 
+    grid-template-areas: 
+      "title"
+      "list-scroll"; 
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EFF2F7;
+    border-radius: 10px;
+
+}
+
+#D .M .Cadre .title{
+    grid-area: title;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding-left: 2%;
+}
+#D .M .Cadre .title h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.655em;
+    color: #000000;
+}
+#D .M .Cadre .list-scroll{
+    grid-area: list-scroll;
+    width: 100%;
+    height: 100%;
+    display: grid; 
+    grid-auto-flow: row dense; 
+    grid-template-columns:  10% 80% 10%; 
+    grid-template-rows: 100%; 
+    gap: 0px 0%; 
+    grid-template-areas: 
+      "GO-L list GO-R"; 
+    justify-content: space-between;
+    align-items: center;
+}
+#D .M .Cadre .list-scroll .GO-L{
+    grid-area: GO-L;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    user-select: none;
+}
+#D .M .Cadre .list-scroll .GO-L img{
+    cursor: pointer;
+}
+#D .M .Cadre .list-scroll .GO-R{
+    grid-area: GO-R;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    user-select: none;
+
+}
+#D .M .Cadre .list-scroll .GO-R img{
+    cursor: pointer;
+}
+#D .M .Cadre .list-scroll .list{
+    grid-area: list;
+    width: 100%;
+    height: 100%;
+    display: grid; 
+    grid-auto-flow: row dense; 
+    grid-template-columns:  100%; 
+    grid-template-rows: 90% 10%; 
+    gap: 0px 0%; 
+    grid-template-areas: 
+      "list-items"
+      "bar"; 
+    justify-content: space-between;
+    align-items: center;
+}
+#D .M .Cadre .list-scroll .list .list-items{
+    grid-area: list-items;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+#D .M .Cadre .list-scroll .list .list-items .item{
+    width: 18%;
+    height: 95%;
+    display: grid; 
+    grid-auto-flow: row dense; 
+    grid-template-columns:  100%; 
+    grid-template-rows: 55% 25% 15%; 
+    gap: 2% 0%; 
+    grid-template-areas: 
+      "pic"
+      "details"
+      "add-to-cart"; 
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+}
+#D .M .Cadre .list-scroll .list .list-items .item .pic{
+    grid-area: pic;
+    display: flex;
+    width: 100%;
+    align-content: center;
+    height: 100%;
+    justify-content: flex-start;
+}
+#D .M .Cadre .list-scroll .list .list-items .item .details{
+    grid-area: details;
+    display: flex;
+    width: 100%;
+    align-content: center;
+    height: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: black;
+}
+#D .M .Cadre .list-scroll .list .list-items .item .details .price{
+    grid-area: price;
+    color: black;
+}
+#D .M .Cadre .list-scroll .list .list-items .item .details .price #price{
+    font-weight: 600;
+    color: black;
+
+}
+#D .M .Cadre .list-scroll .list .list-items .item .details .price #unit{
+    font-weight: 250;
+    color: black;
+
+    
+}
+#D .M .Cadre .list-scroll .list .list-items .item .details .name{
+    grid-area: name;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #000000;
+
+
+}
+#D .M .Cadre .list-scroll .list .list-items .item .add-to-cart{
+    grid-area: add-to-cart;
+}
+#D .M .Cadre .list-scroll .list .list-items .item .add-to-cart{
+    background-color: green;
+    background: #1BE879;
+    border-radius: 25px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    color: #FFFFFF;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 4%;
+}
+#D .M .Cadre .list-scroll .list .bar{
+    grid-area: bar;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+#D .M .Cadre .list-scroll .list .bar .circ{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0% 2%;
+    background-color: #A6A7AB;
+}
+#D .M .Cadre .list-scroll .list .bar #cir_0{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0% 2%;
+    background-color: #A6A7AB;
+}
+#D .C{
+    grid-area: C;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    background-image: url('../src/dashboard/C-bg.png');
+    display: grid; 
+    grid-auto-flow: row dense; 
+    grid-template-columns:  100%; 
+    grid-template-rows: 15% 60% 25%; 
+    gap: 2% 0%; 
+    grid-template-areas: 
+      "title"
+      "cart"
+      "rest"; 
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+#D .C .title{
+    grid-area: title;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#D .C .cart{
+    grid-area: cart;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+#D .C .cart::-webkit-scrollbar{
+    background-color: #DDD8D8;
+    border-radius: 10px;
+}
+#D .C .cart::-webkit-scrollbar-thumb{
+    background-color: #565151;
+    border-radius: 10px;
+
+}
+#D .C .cart::-webkit-scrollbar-button{
+    background-color: none;
+}
+#D .C .cart .empty{
+    background-color: #000000;
+    width: 80%;
+    height: fit-content;
+    padding: 8% 10%;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#D .C .cart .item-b{
+    width: 80%;
+    height: 90px;
+    background-color: #FAEFEF;
+    display: grid; 
+    grid-auto-flow: row dense; 
+    grid-template-columns:  60% 40%; 
+    grid-template-rows: 100%; 
+    gap: 0% 0%; 
+    grid-template-areas: 
+      "name-barcode qte";
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding: 4%;
+    margin: 2% 0%;
+    
+}
+#D .C .cart .item-b .name-barcode{
+    grid-area: name-barcode;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+#D .C .cart .item-b .name-barcode h1{
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 27px;
+/* identical to box height */
+letter-spacing: 0.155em;
+
+color: #000000;
+
+
+}
+#D .C .cart .item-b .name-barcode h2{
+    padding-left: 15%;
+    padding-top: 5%;
+    font-family: 'Libre Barcode 128 Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 22px;
+    /* identical to box height */
+    letter-spacing: 0.155em;
+    color: #000000;
+}
+#D .C .cart .item-b .qte{
+    grid-area: qte;
+    width: fit-content;
+    height: fit-content;
+}
+#D .C .cart .item-b .qte{
+    background: #E5F3DC;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    /* identical to box height */
+    letter-spacing: 0.155em;
+    color: #000000;
+    padding: 2%;
+    border: none;
+    outline: none;
+}
+#D .C .cart .item-b .qte option{
+    background: #E5F3DC;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    /* identical to box height */
+    letter-spacing: 0.155em;
+    color: #000000;
+    border: none;
+
+}
+#D .C .cart .empty h1{
+    padding-top: 2%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 275;
+    font-size: 44px;
+    line-height: 66px;
+    text-align: center;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+}
+#D .C .rest{
+    grid-area: rest;
+    width: 100%;
+    height: 100%;
+    display: grid; 
+    grid-auto-flow: row dense; 
+    grid-template-columns:  80%; 
+    grid-template-rows: 10% 35% 55%; 
+    gap: 0% 0%; 
+    grid-template-areas: 
+      "line"
+      "total"
+      "checkout"; 
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    
+}
+#D .C .rest .line{
+    grid-area: line;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#D .C .rest .total{
+    grid-area: total;
+    width: 100%;
+    height: 100%;
+}
+#D .C .rest .total h1{
+    position: relative;
+    z-index: 9;
+}
+#D .C .rest .total h1::before{
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #1BE879;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    z-index: 0;
+}
+#D .C .rest .total h1 span{
+    position: relative;
+    z-index: 9;
+}
+#D .C .rest .checkout{
+    grid-area: checkout;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    user-select: none;
+    cursor: pointer;
+}
+#D .C .rest .checkout input{
+    background: #FEC95C;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    color: #333232;
+    padding: 4%;
+    cursor: pointer;
+}

@@ -1,0 +1,74 @@
+div{
+    color: black;
+}
+.alert{
+    font-size: 25px;
+    font-weight: bolder;
+
+}
+.good{
+    color: green;
+}
+.bad{
+    color: red;
+}
+#BOX{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#BOX .sub-Box{
+    margin-top: 5%;
+    width: 60%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+#BOX .sub-Box .Title-Box{
+    width: 100%;
+    height: 15%;
+    background-color: rgb(211, 221, 211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding: 5%;
+
+}
+#BOX .sub-Box .Title-Box h1{
+    color: black;
+ }
+#BOX .sub-Box .Body-Box{
+    width: 100%;
+    height: 85%;
+    background-color: rgb(236, 247, 236);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 5%;
+    
+}
+#BOX .sub-Box .Body-Box .item{
+    width: 80%;
+    height: 20%;
+    background-color: rgb(211, 221, 211);
+    margin-top: 2%;
+    padding: 5%;
+    color: black;
+}
+#BOX .sub-Box .Body-Box .item h1{
+    color: black;
+    font-size: 20px;
+
+
+}

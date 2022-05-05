@@ -1,0 +1,171 @@
+footer{
+    width: 100%;
+    height: 10vh;
+}
+#MF{
+    color: white;
+    font-family: "poppins";
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr;
+    grid-template-rows: 0.1fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "logo text1 text2 "
+        "sp mini-text1 mini-text2 ";
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    background: #171639;
+    padding: 1% 0%;
+}
+#MF .logo{
+    grid-area: logo;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#MF .logo img{
+    width: 30%;
+}
+#MF .text1{
+    grid-area: text1;
+    width: 100%;
+    height: 100%;
+}
+#MF .text2{
+    grid-area: text2;
+    width: 100%;
+    height: 100%;
+}
+#MF .sp{
+    grid-area: sp;
+    width: 100%;
+    height: 100%;
+}
+#MF .mini-text1{
+    grid-area: mini-text1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#MF .mini-text2{
+    grid-area: mini-text2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#SF{
+    color: rgb(0, 0, 0);
+    font-family: "poppins";
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "CP SM";
+    background-color: #E3E6F3;
+    padding: 0.5% 0%;
+}
+#SF .CP{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#SF .CP h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+}
+
+#SF .SM ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@media screen and (max-width: 900px) and (min-width: 500px){
+    #MF{
+        color: white;
+        font-family: "poppins";
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "logo"
+            "text1 "
+            "text2 "
+            "mini-text1"
+            "mini-text2 ";
+        text-align: center;
+        justify-content: center;
+     
+    }
+    
+    #MF .logo img{
+        width: 40%;
+        
+    }
+    #MF .text1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #SF{
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1.5fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "CP"
+            "SM";
+    }
+    #SF .CP h1{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 500px) and (min-width: 300px){
+    #MF{
+        color: white;
+        font-family: "poppins";
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "logo"
+            "text1 "
+            "text2 "
+            "mini-text1"
+            "mini-text2 ";
+        text-align: center;
+        }
+        #MF .text1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #SF{
+            grid-template-columns: 1fr ;
+            grid-template-rows: 2fr 1.5fr;
+            gap: 0px 0px;
+            grid-template-areas:
+                "CP"
+                "SM";
+        }
+        #SF .CP h1{
+            font-size: 18px;
+        }
+}
