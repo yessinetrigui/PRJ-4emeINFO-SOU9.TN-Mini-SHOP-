@@ -1,6 +1,7 @@
 <?php
 function AddLivreur($email,$nom,$prenom,$pn,$pass){
     $req = "insert into `user`(`email`, `nom`, `prenom`, `password`, `phone_number`, `Role`) values('$email', '$nom', '$prenom', '$pass','$pn', 'Livreur');";
+
     $chk ="select * from user where email='$email' or phone_number = '$pn';";
     $conn = new mysqli('127.0.0.1', 'root', '', 'db-sou9');
 
@@ -9,6 +10,10 @@ function AddLivreur($email,$nom,$prenom,$pn,$pass){
     }else{
         if($conn->query($req)){
             header('location: ../LivreurViews/LivreurPanel.php?rep=AjoutLivOK');
+            $req  ="select IdUser from user where email='$email'";
+            $id = $conn->query($req)->fetch_array();
+            $re2 = "INSERT INTO `grades`(`IdLivreur`, `grade`) VALUES('$id[0]', 'normal Livreur');";
+            $conn->query($re2);
         }else{
             header('location: ../LivreurViews/LivreurPanel.php?rep=AjoutLivBAD');
         }

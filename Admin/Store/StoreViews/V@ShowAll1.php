@@ -1,4 +1,6 @@
 <?php include "../../head.html";?>
+<?php 
+/*
 <script>
     
     function changeSL(){
@@ -53,7 +55,7 @@
                                 }
                                 
                             }else{
-                                echo "<option  value='1'>Fruit</option>";
+                                echo "<option  value='1'>Fruits</option>";
                                 echo "<option  value='2'>legume</option>";
                                 echo "<option  value='3'>other</option>";
 
@@ -94,9 +96,10 @@
                         $price = $l['price'] + "/" ;
                         $unit = $l['unit'];
                         $qte_stock = $l['qte_stock'];
+                        $pic_path = $l['pic_path'];
                         echo "<div class='col'>
                         <div class='card' style='width: 18rem;'>
-                    <img src='../src/dashboard/spot.png' class='card-img-top' alt='...'>
+                    <img src='/src/dashboard/spot.png' class='card-img-top' alt='...'>
                     <div class='card-body'>
                         <h5 class='card-title'>$ref</h5>
                         <h6 class='card-title'>$n</h6>
@@ -104,7 +107,7 @@
                         <h6 class='card-title'>$qte_stock </h6>
                     
                     <a href='V@modify.php?idItem=$ref' type='button' class='btn btn-warning'>Modify Item</a>
-                    <a href='../StoreController/C@delete.php?ref=$ref' type='button' class='btn btn-danger'>Delete Item</a>
+                    <a href='../StoreController/C@delete.php?ref=$ref' type='button' class='btn btn-danger'>sDelete Item</a>
                     </div>
                 </div></div>
                         ";
@@ -125,3 +128,5 @@
             </div>
         </main>
 </div>
+
+*/

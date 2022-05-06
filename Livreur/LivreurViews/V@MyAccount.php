@@ -65,9 +65,9 @@
                         }else{
                             
                             while ($l=$res->fetch_array()){
-                                if ($l[6]=="Great"){
+                                if ($l[6]=="super"){
                                     $color = "green";
-                                }else if ($l[6]=="Good"){
+                                }else if ($l[6]=="bon"){
                                     $color = "orange";
                                 }
                                 else{

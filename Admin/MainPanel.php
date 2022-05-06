@@ -28,7 +28,7 @@ if(empty($_SESSION['mail'])){
                     <h6>Pending commands!</h6>
                     <?php 
                         $conn = new mysqli('127.0.0.1', 'root', '', 'db-sou9');
-                        $req = "select * from commands where LivreurID is null;";
+                        $req = "select * from commands where LivrasionDate is null;";
                         $res = $conn->query($req);
                         if($res->num_rows==0){
                             echo '<div class="alert alert-info" role="alert">
@@ -38,7 +38,7 @@ if(empty($_SESSION['mail'])){
                                 if($l[2]==null){
                                     $liv = "Pending";
                                 }else{
-                                    $liv = $l[2];
+                                    $liv = "<a href='../Admin/Livreur/LivreurViews/V@LivreurDetails.php?idliv=$l[2]'>$l[2]</a>";
                                 }
                                 echo "
                                 <div class='card text-center'>
@@ -75,7 +75,7 @@ if(empty($_SESSION['mail'])){
                     <h6>Finished commands!</h6>
                     <?php 
                         $conn = new mysqli('127.0.0.1', 'root', '', 'db-sou9');
-                        $req = "select * from commands where LivreurID is not null;";
+                        $req = "select * from commands where LivreurID is not null and LivrasionDate is not null;";
                         $res = $conn->query($req);
                         if($res->num_rows==0){
                             echo '<div class="alert alert-info" role="alert">

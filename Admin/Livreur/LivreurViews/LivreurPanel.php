@@ -125,8 +125,8 @@ function ShowPassword(id){
                 $para = 'pass'.$l[0];
 
                 echo "
-                <div class='card' >
-                <div class='card-body'>
+                <div class='card' style='margin-top:5%;'>
+                <div class='card-body' >
                     <h5 class='card-title'>$l[2] $l[3] </h5>
                     <h6 class='card-subtitle mb-2 text-muted'>ID: $l[0] - Grade: $grade</h6>
                     <p class='card-text' >email: $l[1] - Phone Number $l[5] <br> Commande Terminé: $CommandeFin -  commande en attend: $CommandeNotFin </p>
@@ -143,6 +143,14 @@ function ShowPassword(id){
                                         </div>
                                     </div>
                                 </div>
+                    </div>
+                    <div class='row'>
+                                    <div class='col-sm'>
+                                        <div class='card'>
+                                        <a href='V@LivreurDetails.php?idliv=$l[0]' id='BTNpass".$l[0]."'  onclick=\"ShowPassword('$para')\" class='btn btn-info'>Plus Detail</a>
+                                        </div>
+                                    </div>
+                                
 
                     </div>
                 </div>

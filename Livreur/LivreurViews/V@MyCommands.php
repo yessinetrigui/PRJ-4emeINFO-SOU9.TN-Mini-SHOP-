@@ -27,7 +27,7 @@
                                 
                                 if($Formul<=1){
                                     $color = "green";
-                                }else if($Formul<=2){
+                                }else if($Formul<=3){
                                     $color = "orange";
                                 }else{
                                     $color = "red";
@@ -41,10 +41,9 @@
                                     <h5 class='card-title'>Client ID: $l[1], Command ID:  $l[0]</h5>
                                     <p class='card-text'>$l[3]</p>
                                     <a href='../Livreur/LivreurController/C@Act.php?cmd=DONE&idcmd=$l[0]' class='btn btn-success'>Done</a>
-                                    <a href='#' class='btn btn-danger'>Report Problem</a>
                                 </div>
                                 <div class='card-footer text-muted'>
-                                   $l[5]
+                                 Command Date:  $l[5] | Accepted Date:  $l[7]
                                 </div>
                                 </div>
                                 </div>

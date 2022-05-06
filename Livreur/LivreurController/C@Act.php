@@ -22,11 +22,11 @@ function updateGrade($conn){
     $Min = substr_count($Details, '-');
     $Max = substr_count($Details, '+');
     if($Min==$Max){
-        $NewGrade= "Stable Seller";
+        $NewGrade= "Normal Livreur";
     }else if($Min>=$Max){
-        $NewGrade= "Bad Seller(karkar)";
+        $NewGrade= "Mal Livreur";
     }else{
-        $NewGrade= "Great Seller";
+        $NewGrade= "super Livreur";
     }
     $req= "update grades set grade='$NewGrade' where IdLivreur='$id';";
     $conn->query($req);
@@ -48,19 +48,25 @@ function updateGradeDetails($conn, $ST){
 function Done_Command($idcmd, $idLiv,$conn){
     $TN = date('Y-m-d', time());
     $T = time();
-    $res = $conn->query("select CommandDate from commands where commandID='$idcmd';");
+    $res = $conn->query("select CommandDate,TakeLivDate from commands where commandID='$idcmd';");
     $DT = $res->fetch_array();
     $TC = strtotime($DT[0]);
     $Formul =(int) (($T-$TC)/86400);
-    if($Formul<=1){
-        $State = "Great";
+    if($TN==$DT[1]){
+        $State = "super";
         updateGradeDetails($conn, "+");
-    }else if($Formul<=2){
-        $State = "Good";
     }else{
-        $State = "BAD";
-        updateGradeDetails($conn, "-");
+        if($Formul<=1){
+            $State = "super";
+            updateGradeDetails($conn, "+");
+        }else if($Formul<=3){
+            $State = "bon";
+        }else{
+            $State = "mal";
+            updateGradeDetails($conn, "-");
+        }
     }
+    
     updateGrade($conn);
     $req = "update commands set LivrasionDate='$TN',STATE='$State' where commandID = '$idcmd' and LivreurID= '$idLiv';";
     $conn->query($req);

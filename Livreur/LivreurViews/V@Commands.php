@@ -26,11 +26,10 @@
                                 </div>
                                 <div class='card-body'>
                                     <h5 class='card-title'>Client ID: $l[1]</h5>
-                                    <p class='card-text'>$l[3]</p>
                                     <a href='LivreurController/C@TakeCommand.php?idcmd=$l[0]' class='btn btn-primary'>Take It</a>
                                 </div>
                                 <div class='card-footer text-muted'>
-                                   $l[5]
+                                   Command Date: $l[5]
                                 </div>
                                 </div>
                                 </div>

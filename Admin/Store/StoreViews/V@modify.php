@@ -24,7 +24,7 @@
             <div class="container">
                 <div class="row justify-content-center bg-light border border-primary shadow-sm p-3 mb-5 bg-white rounded">
                     <div class="col-md-16">
-<form class="row g-3" action='../StoreController/C@modify.php' method="POST">
+<form class="row g-3" action='../StoreController/C@modify.php' method="POST" enctype="multipart/form-data">
 <h2>Modify ITEM</h2>
 <?php 
   $NotFound = false;
@@ -93,7 +93,10 @@
   </div>
   <div class="col-md-2">
     <label for="inputZip" class="form-label">Image</label>
-    <input name="pic_path" type="file" name="file" id="" value="default.png" <?php if($NotFound){echo "disabled";}?>>
+    <?php if(isset($_POST['idItem'])||isset($_GET['idItem'])){
+    echo "<img width='100%' src='../../../src/storepics/$l[4]'>";
+    } ?>
+    <input name="pic_path" type="file"  id="" value="default.png" <?php if($NotFound){echo "disabled";}?>>
 </div>
   
   <div class="col-12">

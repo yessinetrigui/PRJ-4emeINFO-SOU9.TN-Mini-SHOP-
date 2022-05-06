@@ -1,4 +1,10 @@
 <?php include "../../head.html";?>
+
+
+
+
+
+
 <script>
     
     function changeSL(){
@@ -13,7 +19,7 @@
         }else{
             Categorie="unset"
         }
-        window.open("V@ShowAll.php?type="+Categorie, target="_self")
+        window.open("StorePanel.php?type="+Categorie, target="_self")
     }
 </script>
 <body>
@@ -94,15 +100,15 @@
                         $price = $l['price'] + "/" ;
                         $unit = $l['unit'];
                         $qte_stock = $l['qte_stock'];
-                        echo "<div class='col'>
+                        $pic_path = $l['pic_path'];
+                        echo "<div class='col' style='margin-top:4%;'>
                         <div class='card' style='width: 18rem;'>
-                    <img src='../src/dashboard/spot.png' class='card-img-top' alt='...'>
+                    <img src='../../../src/storepics/$pic_path' class='card-img-top' alt='...'>
                     <div class='card-body'>
-                        <h5 class='card-title'>$ref</h5>
-                        <h6 class='card-title'>$n</h6>
-                        <h6 class='card-title'>$price TND/$unit </h6>
-                        <h6 class='card-title'>$qte_stock </h6>
-                    
+                        <h5 class='card-title'>Ref: $ref</h5>
+                        <h6 class='card-title'>Name: $n</h6>
+                        <h6 class='card-title'>Price: $price TND/$unit </h6>
+                        <h6 class='card-title'>Qte: $qte_stock </h6>
                     <a href='V@modify.php?idItem=$ref' type='button' class='btn btn-warning'>Modify Item</a>
                     <a href='../StoreController/C@delete.php?ref=$ref' type='button' class='btn btn-danger'>Delete Item</a>
                     </div>

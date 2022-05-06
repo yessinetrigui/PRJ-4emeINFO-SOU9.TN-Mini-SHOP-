@@ -10,7 +10,7 @@
                 <div class="row justify-content-center bg-light border border-primary shadow-sm p-3 mb-5 bg-white rounded">
                     <div class="col-md-16">
 
-                    <form class="row g-3" method="POST" action="../StoreController/C@add.php">
+                    <form class="row g-3" method="POST" action="../StoreController/C@add.php" enctype="multipart/form-data">
 <h2>ADD NEW ITEM</h2>
 
   <?php 
@@ -61,7 +61,7 @@
   </div>
   <div class="col-md-2">
     <label for="inputZip" class="form-label">Image</label>
-    <input name="pic_path" type="file" name="file" id="">
+    <input type="file" name="choosefile" id="">
 </div>
   
   <div class="col-12">

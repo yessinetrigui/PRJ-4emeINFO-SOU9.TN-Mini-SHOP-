@@ -38,21 +38,21 @@ if(empty($_SESSION['mail'])){
             "fruit":{<?php
             if($res1->num_rows!=0){
                 while ($l = $res1->fetch_array()){
-                    echo "'$l[0]':new Map().set('ref','$l[0]').set('name','$l[1]').set('price','$l[2]').set('qte', '$l[3]').set('pic_path', '$l[4]').set('unit', '$l[6]'),";
+                    echo "'$l[0]':new Map().set('ref','$l[0]').set('name','$l[1]').set('price','$l[2]').set('qte', '$l[3]').set('pic_path', '$l[4]').set('unit', '$l[6]').set('pic_path', '$l[4]'),";
                 }
             }
             ?>},
             "legume":{<?php
             if($res2->num_rows!=0){
                 while ($l = $res2->fetch_array()){
-                    echo "'$l[0]':new Map().set('ref','$l[0]').set('name','$l[1]').set('price','$l[2]').set('qte', '$l[3]').set('pic_path', '$l[4]').set('unit', '$l[6]'),";
+                    echo "'$l[0]':new Map().set('ref','$l[0]').set('name','$l[1]').set('price','$l[2]').set('qte', '$l[3]').set('pic_path', '$l[4]').set('unit', '$l[6]').set('pic_path', '$l[4]'),";
                 }
             }
             ?>},
             "other":{<?php
             if($res3->num_rows!=0){
                 while ($l = $res3->fetch_array()){
-                    echo "'$l[0]':new Map().set('ref','$l[0]').set('name','$l[1]').set('price','$l[2]').set('qte', '$l[3]').set('pic_path', '$l[4]').set('unit', '$l[6]'),";
+                    echo "'$l[0]':new Map().set('ref','$l[0]').set('name','$l[1]').set('price','$l[2]').set('qte', '$l[3]').set('pic_path', '$l[4]').set('unit', '$l[6]').set('pic_path', '$l[4]'),";
                 }
             }
              ?>},

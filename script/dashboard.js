@@ -131,17 +131,16 @@ class Categorie{
             }
             this.Menu_code += "<div class='item'>"+
                 "<div class='pic'>"+
-                "<img src='src/dashboard/spot.png' alt=''>"+
+                "<img style='width: 100%;height: 100%;' src='src/storepics/"+OBJ[this.type][this.Keys[i]].get("pic_path")+"' alt=''>"+
                 "</div>"+
                 "<div class='details'>"+
-                "<div class='price'><span id='price'>"+OBJ[this.type][this.Keys[i]].get("price")+"</span>/<span id='unit'>"+OBJ[this.type][this.Keys[i]].get("unit")+"</span></div>"+
+                "<div class='price'><span id='price'>"+OBJ[this.type][this.Keys[i]].get("price")+" TND</span>/<span id='unit'>"+OBJ[this.type][this.Keys[i]].get("unit")+"</span></div>"+
                 "<div class='name'>"+OBJ[this.type][this.Keys[i]].get("name")+"</div>"+
                 "</div>"+
                 "<button class='add-to-cart' onclick="+this.ext+".Addtocart('"+OBJ[this.type][this.Keys[i]].get("ref")+"')>Add to cart</button>"+
                 "</div>"
         }
         document.getElementById(this.type).innerHTML = this.Menu_code;
-
     }
     
     //check if the name on list or not
